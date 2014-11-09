@@ -16,11 +16,13 @@ import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.graphics.g3d.ModelInstance;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g3d.environment.DirectionalLight;
+import com.badlogic.gdx.graphics.g3d.utils.CameraInputController;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 
 public class ThreeDTest implements ApplicationListener {
 	public PerspectiveCamera cam;
 	public ModelBatch modelBatch;
+	public CameraInputController camController;
 	public Model model;
 	public ModelInstance instance;
 	private Environment environment;
@@ -37,6 +39,9 @@ public class ThreeDTest implements ApplicationListener {
 		cam.near = 1f;
 		cam.far = 300f;
 		cam.update();
+		
+		camController = new CameraInputController(cam);
+		Gdx.input.setInputProcessor(camController);
 		
 		modelBatch = new ModelBatch();
 		ModelBuilder mb = new ModelBuilder();
