@@ -40,7 +40,7 @@ public class ThreeDTest implements ApplicationListener {
 	}
 
 	private void doneLoading() {
-		 Model ship = assets.get("ship/ship.obj", Model.class);
+		 Model ship = assets.get("ship/ship.g3db", Model.class);
 	        for (float x = -5f; x <= 5f; x += 2f) {
 	            for (float z = -5f; z <= 5f; z += 2f) {
 	                ModelInstance shipInstance = new ModelInstance(ship);
@@ -71,7 +71,7 @@ public class ThreeDTest implements ApplicationListener {
 		Gdx.input.setInputProcessor(camController);
 
 		assets = new AssetManager();
-		assets.load("ship/ship.obj", Model.class);
+		assets.load("ship/ship.g3db", Model.class);
 		loading = true;
 	}
 
