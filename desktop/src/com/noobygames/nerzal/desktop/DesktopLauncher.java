@@ -2,6 +2,7 @@ package com.noobygames.nerzal.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
+import com.noobygames.nerzal.LoadingAScene;
 import com.noobygames.nerzal.ThreeDTest;
 
 public class DesktopLauncher {
@@ -11,6 +12,6 @@ public class DesktopLauncher {
 		config.width = 800;
 		config.height = 640;
 		
-		new LwjglApplication(new ThreeDTest(), config);
+		new LwjglApplication(new LoadingAScene(), config);
 	}
 }
