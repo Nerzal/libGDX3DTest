@@ -2,6 +2,7 @@ package com.noobygames.nerzal.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
+import com.noobygames.nerzal.CreatingAShader;
 import com.noobygames.nerzal.LoadingAScene;
 import com.noobygames.nerzal.ThreeDTest;
 
